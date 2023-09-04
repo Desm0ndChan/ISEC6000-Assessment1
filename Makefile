@@ -19,6 +19,9 @@ deploy:
 
 build: build-platform cluster deploy
 
+check:
+	./image.sh
+
 delete:
 	kubectl delete -f $(MAINFEST_PATH)
 	kind delete cluster --name $(CLUSTER_NAME)
