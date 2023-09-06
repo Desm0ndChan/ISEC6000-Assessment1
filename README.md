@@ -1,3 +1,35 @@
+# ISEC 6000 Assessment 1
+This is a guide for ISEC6000 Secure DevOps on how to reproduce the steps for building up saleor platform services with a local deployed Kubernetes cluster in a Linux environment.
+
+0. Dependency check: 
+    - [ ] docker
+    - [ ] kubectl
+    - [ ] make
+    - [ ] git
+    - [ ] kind(Kubernetes  in Docker)
+    - [ ] trivy
+1. Clone the repository to the Linux machine
+2. change directory 
+    ```bash
+    cd ISEC6000-Assessment1
+    ```
+3. build and deploy
+    ```bash
+    make build
+    ```
+4. Access the dashboard on localhost 9003 or perform any other action. If want to perform a scan against iamges with trivy
+    ```
+    make check
+    ```
+5. Once finished deployment, clean up with
+    ```
+    make delete
+    # Or to prune the system
+    make clean 
+    ```
+
+The below is the original content of the README.md
+----
 ![Saleor Platform](https://user-images.githubusercontent.com/249912/71523206-4e45f800-28c8-11ea-84ba-345a9bfc998a.png)
 
 <div align="center">
